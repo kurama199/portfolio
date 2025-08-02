@@ -1,15 +1,18 @@
 import { cn, localStorageKeys } from "@/utils/utils";
 import { Moon, Sun } from "lucide-react";
-import React, { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect } from "react";
 
 interface ThemeToggleProps {
   className?: string;
+  isDarkMode?: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ThemeToggle: React.FC<ThemeToggleProps> = ({
   className,
+  isDarkMode = false,
+  setIsDarkMode,
 }: ThemeToggleProps) => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
   useLayoutEffect(() => {
     const theme = localStorage.getItem(localStorageKeys.theme);
     if (theme === "dark") {
@@ -32,7 +35,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
         })
       }
       className={cn(
-        "relative w-[80px] h-[40px] flex items-center rounded-full border-4 border-solid p-2 transition-colors duration-300 ease-in-out",
+        "relative w-[80px] h-[40px] flex items-center rounded-full border-4 border-solid p-2 transition-colors duration-300 ease-in-out z-10",
         isDarkMode
           ? "bg-gray-800 border-gray-400"
           : "bg-yellow-200 border-yellow-500",

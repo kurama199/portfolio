@@ -7,7 +7,7 @@
     --color-primary-foreground: hsl(var(--primary-foreground));
     --color-card: hsl(var(--card));
     --animate-float: float 6s ease-in-out infinite;
-    --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
+    --animate-pulse-subtle: pulse-subtle 2s ease-in-out infinite;
     --animate-fade-in: fade-in 0.7s ease-out forwards;
     --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
     --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
@@ -29,7 +29,7 @@
             opacity: 1;
         }
         50% {
-            opacity: 0.8;
+            opacity: 0.6;
         }
     }
     @keyframes fade-in {
@@ -67,7 +67,7 @@
         --border: 214 32% 91%;
     }
     .dark {
-        --background: 247 12% 19%;
+        --background: 247 12% 5%;
         --foreground: 213 31% 91%;
         --card: 222 47% 8%;
         --primary: 250 65% 65%;
