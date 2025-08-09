@@ -3,7 +3,7 @@ import { ArrowDown } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <div
+    <section
       id={navData.Home}
       className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
@@ -34,6 +34,6 @@ export const HeroSection = () => {
           <ArrowDown className="h-5 w-5 text-primary" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

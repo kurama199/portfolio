@@ -10,9 +10,9 @@ export const localStorageKeys = {
 };
 
 export const navData = {
-  Home: "#hero",
-  About: "#About",
-  Skills: "#skills",
-  Experience: "#experience",
-  Contact: "#contact",
+  Home: "hero",
+  About: "about",
+  Skills: "skills",
+  Experience: "experience",
+  Contact: "contact",
 };

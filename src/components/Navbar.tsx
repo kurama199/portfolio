@@ -27,7 +27,7 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed transition-all duration-300 z-40 w-9/10 m-auto",
+        "fixed transition-all duration-300 z-40 w-8/10 m-auto",
         isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
       )}
     >
@@ -40,7 +40,7 @@ export const Navbar = () => {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         <a
-          href="#hero"
+          href={`#${navData.Home}`}
           className="text-xl font-bold text-primary flex items-center"
         >
           <span className="relative z-40">
@@ -52,7 +52,7 @@ export const Navbar = () => {
           {navItems.map((item, key) => (
             <a
               key={key}
-              href={item.href}
+              href={`#${item.href}`}
               className="text-foreground/80 hover:text-primary transition-colors duration-300"
             >
               {item.name}
@@ -73,7 +73,7 @@ export const Navbar = () => {
             {navItems.map((item, key) => (
               <a
                 key={key}
-                href={item.href}
+                href={`#${item.href}`}
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >

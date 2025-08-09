@@ -41,7 +41,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
         "fixed right-5 top-5 w-[80px] h-[40px] flex items-center rounded-full border-4 border-solid p-2 transition-colors duration-300 ease-in-out z-10",
         isDarkMode
           ? "bg-gray-800 border-gray-400"
-          : "bg-yellow-200 border-yellow-500",
+          : "bg-yellow-200/80 border-yellow-500/80",
         className
       )}
     >
@@ -55,7 +55,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
         {isDarkMode ? (
           <Moon className="text-white" size={20} />
         ) : (
-          <Sun className="text-yellow-500" size={20} />
+          <Sun className="text-yellow-500/80" size={20} />
         )}
       </span>
     </button>

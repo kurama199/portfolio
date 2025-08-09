@@ -4,6 +4,7 @@
     --color-background: hsl(var(--background));
     --color-foreground: hsl(var(--foreground));
     --color-primary: hsl(var(--primary));
+    --color-secondary: hsl(var(--secondary));
     --color-primary-foreground: hsl(var(--primary-foreground));
     --color-card: hsl(var(--card));
     --color-muted-foreground: hsl(var(--muted-foreground));
@@ -15,6 +16,7 @@
     --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
     --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
     --animate-meteor: meteor 5s linear infinite;
+    --animate-grow: grow 1.5s ease-out forwards;
     @keyframes float {
         0%,
         100% {
@@ -53,14 +55,23 @@
             opacity: 0;
         }
     }
+    @keyframes grow {
+        0% {
+            transform: scale(0, 1);
+        }
+        100% {
+            transform: scale(1, 1);
+        }
+    }
 }
 
 @layer base {
     :root {
-        --background: 247 12% 89%;
+        --background: 259 72% 94%;
         --foreground: 222 47% 11%;
         --card: 0 0% 100%;
         --primary: 250 47% 60%;
+        --secondary: 243 87% 79%;
         --primary-foreground: 210 40% 18%;
         --border: 214 32% 91%;
         --muted-foreground: 222 47% 11% / 0.8;
@@ -71,6 +82,7 @@
         --foreground: 213 31% 91%;
         --card: 222 47% 8%;
         --primary: 250 65% 65%;
+        --secondary: 259 87% 30%;
         --primary-foreground: 213 31% 91%;
         --border: 217 33% 20%;
         --muted-foreground: 213 31% 91% / 0.8;

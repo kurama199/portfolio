@@ -3,6 +3,8 @@ import { StarBackground } from "@/components/StarBackground";
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
+import { AboutSection } from "@/components/AboutSection";
+import { SkillsSection } from "@/components/SkillsSection";
 
 export const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
@@ -13,6 +15,8 @@ export const Home = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <AboutSection />
+        <SkillsSection />
       </main>
       {/* Main Content */}
       {/* Footer */}
