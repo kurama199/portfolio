@@ -1,30 +1,18 @@
-import { cn } from "@/utils/utils";
+import { cn, navData } from "@/utils/utils";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-const navItems = [
-  {
-    name: "Home",
-    href: "#hero",
-  },
-  {
-    name: "About",
-    href: "#about",
-  },
-  {
-    name: "Skills",
-    href: "#skills",
-  },
-  {
-    name: "Experience",
-    href: "#experience",
-  },
-  {
-    name: "Contact",
-    href: "#contact",
-  },
-];
 export const Navbar = () => {
+  const navItems = useMemo(() => {
+    const toReturn: { name: string; href: string }[] = [];
+    Object.entries(navData).forEach(([key, value]: string[]) => {
+      toReturn.push({
+        name: key,
+        href: value,
+      });
+    });
+    return toReturn;
+  }, []);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   useEffect(() => {
@@ -39,7 +27,7 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed transition-all duration-300 z-9 w-full m-auto",
+        "fixed transition-all duration-300 z-40 w-9/10 m-auto",
         isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
       )}
     >
@@ -55,7 +43,7 @@ export const Navbar = () => {
           href="#hero"
           className="text-xl font-bold text-primary flex items-center"
         >
-          <span className="relative z-10">
+          <span className="relative z-40">
             <span className="text-foreground text-glow">Nikhil </span>Portfolio
           </span>
         </a>

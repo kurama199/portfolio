@@ -18,6 +18,9 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
       setIsDarkMode(true);
+    } else {
+      document.documentElement.classList.remove("dark");
+      setIsDarkMode(false);
     }
   }, []);
   return (
@@ -35,7 +38,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
         })
       }
       className={cn(
-        "relative w-[80px] h-[40px] flex items-center rounded-full border-4 border-solid p-2 transition-colors duration-300 ease-in-out z-10",
+        "fixed right-5 top-5 w-[80px] h-[40px] flex items-center rounded-full border-4 border-solid p-2 transition-colors duration-300 ease-in-out z-10",
         isDarkMode
           ? "bg-gray-800 border-gray-400"
           : "bg-yellow-200 border-yellow-500",
