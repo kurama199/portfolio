@@ -7,6 +7,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ProjectSection } from "@/components/ProjectSection";
 import { ContactSection } from "@/components/ContactSection";
+import { Footer } from "@/components/Footer";
 
 export const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
@@ -22,8 +23,7 @@ export const Home = () => {
         <ProjectSection />
         <ContactSection />
       </main>
-      {/* Main Content */}
-      {/* Footer */}
+      <Footer />
     </div>
   );
 };
