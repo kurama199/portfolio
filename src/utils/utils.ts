@@ -13,6 +13,6 @@ export const navData = {
   Home: "hero",
   About: "about",
   Skills: "skills",
-  Experience: "experience",
+  Project: "project",
   Contact: "contact",
 };

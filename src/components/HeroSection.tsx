@@ -24,7 +24,7 @@ export const HeroSection = () => {
             features that improve performance, scalability, and user engagement.
           </p>
           <div className="opacity-0 animate-fade-in-delay-4">
-            <a href={navData.Experience} className="cosmic-button">
+            <a href={`#${navData.Project}`} className="cosmic-button">
               View My Work
             </a>
           </div>

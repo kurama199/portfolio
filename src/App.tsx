@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "@/Pages/Home";
 import { NotFound } from "@/Pages/NotFound";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <ToastContainer newestOnTop={true} position="bottom-right" />
     </BrowserRouter>
   );
 }

@@ -25,7 +25,7 @@ export const AboutSection = () => {
               ever-changing IT landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center items-center">
-              <a href={navData.Contact} className="cosmic-button">
+              <a href={`#${navData.Contact}`} className="cosmic-button">
                 Get in Touch
               </a>
               <a
