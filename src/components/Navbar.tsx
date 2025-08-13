@@ -1,6 +1,6 @@
 import { cn, navData } from "@/utils/utils";
 import { Menu, X } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useLayoutEffect, useMemo, useState } from "react";
 
 export const Navbar = () => {
   const navItems = useMemo(() => {
@@ -15,7 +15,7 @@ export const Navbar = () => {
   }, []);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
@@ -24,14 +24,24 @@ export const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  useLayoutEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isMenuOpen]);
   return (
     <nav
       className={cn(
-        "fixed transition-all duration-300 z-40 w-8/10 m-auto",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        "fixed transition-all duration-300 z-40 w-full m-auto",
+        isScrolled
+          ? "py-3 bg-background/80 backdrop-blur-sm shadow-md"
+          : "py-5",
+        isMenuOpen ? "h-full" : ""
       )}
     >
-      <div className="container flex items-center md:justify-between md:gap-0 gap-5">
+      <div className="container flex items-center md:justify-between md:gap-0 gap-5 w-8/10">
         <button
           onClick={() => setIsMenuOpen((i) => !i)}
           className="md:hidden p-2 text-foreground z-50"
@@ -65,7 +75,7 @@ export const Navbar = () => {
             "fixed inset-0 bg-background/20 backdrop-blur-md z-40 flex flex-col items-center justify-center",
             "transition-all duration-300 md:hidden",
             isMenuOpen
-              ? "opacity-100 pointer-events-auto"
+              ? "opacity-100 pointer-events-auto h-full"
               : "opacity-0 pointer-events-none"
           )}
         >

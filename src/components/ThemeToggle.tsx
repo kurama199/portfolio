@@ -38,7 +38,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
         })
       }
       className={cn(
-        "fixed right-5 top-5 w-[80px] h-[40px] flex items-center rounded-full border-4 border-solid p-2 transition-colors duration-300 ease-in-out z-10",
+        "fixed right-5 top-2 w-[80px] h-[40px] flex items-center rounded-full border-4 border-solid p-2 duration-300 ease-in-out z-50",
         isDarkMode
           ? "bg-gray-800 border-gray-400"
           : "bg-yellow-200/80 border-yellow-500/80",

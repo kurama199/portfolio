@@ -27,7 +27,7 @@ const Projects = [
 export const ProjectSection = () => {
   return (
     <section id={navData.Project} className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
           Featured <span className="text-primary"> Projects</span>
         </h2>
