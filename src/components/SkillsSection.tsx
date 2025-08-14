@@ -66,7 +66,7 @@ export const SkillsSection = () => {
             selectedCategory == "All" || skill.category === selectedCategory ? (
               <div
                 key={key + selectedCategory}
-                className="bg-card p-6 rounded-lg card-hover text-glow"
+                className="bg-card px-6 py-4 rounded-lg card-hover text-glow"
               >
                 <div className="text-left mb-4">
                   <h3 className="font-semibold text-lg">{skill.name}</h3>
@@ -77,6 +77,7 @@ export const SkillsSection = () => {
                     style={{ width: `${skill.level}%` }}
                   />
                 </div>
+                <div className="text-right mt-1">{skill.level}</div>
               </div>
             ) : null
           )}

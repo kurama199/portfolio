@@ -2,7 +2,7 @@ import { cn, localStorageKeys } from "@/utils/utils";
 import { Moon, Sun } from "lucide-react";
 import React, { useLayoutEffect } from "react";
 
-interface ThemeToggleProps {
+export interface ThemeToggleProps {
   className?: string;
   isDarkMode?: boolean;
   setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
@@ -38,26 +38,18 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
         })
       }
       className={cn(
-        "fixed right-5 top-2 w-[80px] h-[40px] flex items-center rounded-full border-4 border-solid p-2 duration-300 ease-in-out z-50",
+        "p-2 rounded-full transition-colors duration-300 ease-in-out z-50 cursor-pointer border",
         isDarkMode
           ? "bg-gray-800 border-gray-400"
           : "bg-yellow-200/80 border-yellow-500/80",
         className
       )}
     >
-      <span
-        className={cn(
-          "absolute left-2 top-1/2 -translate-y-1/2 transition-transform duration-300 ease-in-out",
-          "h-[24px] w-[24px] rounded-full flex items-center justify-center",
-          isDarkMode ? "translate-x-[32px]" : "translate-x-0"
-        )}
-      >
-        {isDarkMode ? (
-          <Moon className="text-white" size={20} />
-        ) : (
-          <Sun className="text-yellow-500/80" size={20} />
-        )}
-      </span>
+      {isDarkMode ? (
+        <Moon className="text-white" size={24} />
+      ) : (
+        <Sun className="text-yellow-500/80" size={24} />
+      )}
     </button>
   );
 };
