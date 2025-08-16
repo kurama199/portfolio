@@ -4,24 +4,34 @@ import { ArrowRight } from "lucide-react";
 const Projects = [
   {
     title: "Design System",
-    Description:
-      "Lead the project for creating a library for implementing Design System using Figma. Library had support for Pure React components which would use SCSS generated using tokens fetched from Figma which Devs can use.",
-    Impact:
-      "No need to write the UI layers or the structure likewise. Created pixel-perfect consistency across clients. 4-6 days reductions in development depending on project",
+    projectPoints: [
+      "Developed a JavaScript library for the client, providing reusable and performant React pure components.",
+      "Integrated the Figma API to automatically fetch style tokens and convert them into SCSS variables and React components.",
+    ],
+    Impact: [
+      "Eliminated the need for the client to manually build UI layers, reducing development time by 5–6 days and improving overall project delivery speed by 10–15%.",
+      "Ensured pixel-perfect design consistency, reducing QA testing efforts by 15–20%, minimizing bugs, and accelerating release cycles.",
+    ],
   },
   {
-    title: "Migrating from Axios to ApolloClient",
-    Description:
-      "Lead the Project to migrate From Axios to ApolloClient for IAP in the app",
-    Impact:
-      "Reduced Data overfetch by 40-60%, improved API Response time by 25-30%",
+    title: "REST to Apollo Client Migration",
+    projectPoints: [
+      "Led the migration of In-App Purchase (IAP) flows from REST (Axios/RxJS) to a GraphQL backend using Apollo Client on the frontend.",
+    ],
+    Impact: [
+      "Reduced data overfetching by 40–60% and improved API response times by 25–30%.",
+      "Decreased reliance on Redux by leveraging Apollo Client’s caching capabilities, improving performance and maintainability.",
+    ],
   },
   {
-    title: "In-App-Purchase (IAP) integration",
-    Description:
-      "Developed and Deployed IAP feature allowing users to view and manage subscriptions",
-    Impact:
-      "Gained strong user engagement with 100K+ clicks and 1k+ upsells. Reduced customer support costs by 40-60% saving annual cost of $400k-$600k.",
+    title: "In-App Subscription Management",
+    projectPoints: [
+      "Designed, developed, and deployed an IAP feature enabling users to view and manage their subscriptions.",
+    ],
+    Impact: [
+      "Achieved high user engagement with 100K+ clicks and 1K+ upsells within one year.",
+      "Reduced customer support costs by 40–60%, resulting in annual savings of $400K–$600K.",
+    ],
   },
 ];
 export const ProjectSection = () => {
@@ -32,7 +42,7 @@ export const ProjectSection = () => {
           Featured <span className="text-primary"> Projects</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-          Here are some of the projects where I have contributed significantly
+          Here are some of the key projects I've contributed significantly
           thorughout my exprience as a FrontEnd Developer
         </p>
         <div className="rounded-xl py-5 px-3 flex flex-col gap-4">
@@ -44,18 +54,26 @@ export const ProjectSection = () => {
               <h3 className="font-bold text-xl md:text-2xl text-primary mb-4">
                 {project.title}
               </h3>
-              <div className="font-semibold text-muted-foreground/95 text-lg md:text-xl">
-                {project.Description}
-              </div>
-              <div className="font-bold text-foreground md:text-xl mt-10">
-                {project.Impact}
-              </div>
+              <ul className="list-disc font-semibold text-muted-foreground/95 text-md md:text-lg">
+                {project?.projectPoints.map((point, index) => (
+                  <li key={index} className="mt-1">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+              <ul className="list-disc font-bold text-foreground text-md md:text-lg mt-6">
+                {project?.Impact.map((point, index) => (
+                  <li key={index} className="mt-1">
+                    {point}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
         <div className="text-center mt-12">
           <a
-            href="https://github.com/dashboard"
+            href="https://github.com/kurama199"
             target="_blank"
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
           >

@@ -37,6 +37,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
           return !i;
         })
       }
+      title="Theme Toggle"
       className={cn(
         "p-2 rounded-full transition-colors duration-300 ease-in-out z-50 cursor-pointer border",
         isDarkMode

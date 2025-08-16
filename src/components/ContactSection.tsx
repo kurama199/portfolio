@@ -122,7 +122,7 @@ export const ContactSection = () => {
                     className="text-muted-foreground flex gap-2 items-center"
                     target="_blank"
                   >
-                    Bangalore, Karnataka (560103)
+                    Bangalore, Karnataka
                   </a>
                 </div>
               </div>
@@ -133,14 +133,14 @@ export const ContactSection = () => {
                 <a
                   href="https://www.linkedin.com/in/nikhil-lal-pawa-628262134/"
                   target="_blank"
-                  className="hover:text-primary transition-colors duration-300"
+                  className="hover:text-primary text-primary md:text-primary/70 transition-colors duration-300"
                 >
                   <Linkedin />
                 </a>
                 <a
                   href="https://www.instagram.com/kurama_nlp?igsh=MWt6dndrOHBvbzR6NA%3D%3D&utm_source=qr"
                   target="_blank"
-                  className="hover:text-primary transition-colors duration-300"
+                  className="hover:text-primary text-primary md:text-primary/70 transition-colors duration-300"
                 >
                   <Instagram />
                 </a>

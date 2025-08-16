@@ -15,16 +15,16 @@ const skills = [
   { name: "SCSS", level: 80, category: "Frameworks" },
   { name: "Apollo Client", level: 75, category: "Frameworks" },
   //tools
-  { name: "VS Code", level: 100, category: "tools" },
-  { name: "Git/GitHub", level: 100, category: "tools" },
+  { name: "VS Code", level: 95, category: "tools" },
+  { name: "Git/GitHub", level: 95, category: "tools" },
   { name: "MongoDB", level: 60, category: "tools" },
-  { name: "GitLab", level: 100, category: "tools" },
+  { name: "GitLab", level: 95, category: "tools" },
   { name: "Figma", level: 85, category: "tools" },
-  { name: "Jira", level: 100, category: "tools" },
+  { name: "Jira", level: 95, category: "tools" },
   // IT constructs
   { name: "DSA", level: 75, category: "IT Constructs" },
   { name: "OOPS", level: 90, category: "IT Constructs" },
-  { name: "Agile", level: 100, category: "IT Constructs" },
+  { name: "Agile", level: 95, category: "IT Constructs" },
   { name: "Cross-Team Communication", level: 90, category: "IT Constructs" },
   { name: "Design System", level: 95, category: "IT Constructs" },
 ];
@@ -77,7 +77,7 @@ export const SkillsSection = () => {
                     style={{ width: `${skill.level}%` }}
                   />
                 </div>
-                <div className="text-right mt-1">{skill.level}</div>
+                <div className="text-right mt-1">{skill.level}%</div>
               </div>
             ) : null
           )}

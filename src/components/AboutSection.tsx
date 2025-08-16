@@ -1,5 +1,5 @@
 import { navData } from "@/utils/utils";
-import { Briefcase, Code, User } from "lucide-react";
+import { Code, GraduationCap, Link, Workflow } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -15,14 +15,14 @@ export const AboutSection = () => {
               A Passionate Web Developer
             </h3>
             <p className="text-muted-foreground">
-              With over 4+ years of experience in web Development, I specialize
-              in creating performant web applications using modern technologies
-              such as React, Tailwind, RTK etc.
+              With over 4+ years of experience in Web Development. I specialize
+              in creating performant web applications using technologies like
+              React, Redux, Tailwind, SCSS, TypeScript, Javascript etc.
             </p>
             <p className="text-muted-foreground">
-              I am most passionate about learning, improving and refining my
-              work. I am constantly learning and always evoliving in the
-              ever-changing IT landscape.
+              Passionate about continuous learning, I strive to improve and
+              refine my work, adapting quickly to the ever-evolving IT
+              landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center items-center">
               <a href={`#${navData.Contact}`} className="cosmic-button">
@@ -41,13 +41,38 @@ export const AboutSection = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
+                  <GraduationCap className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg">Education</h4>
+                  <p className="text-muted-foreground">
+                    Graduated in 2020 from the prestigious{" "}
+                    <span className="text-primary font-bold">
+                      IIT (ISM) Dhanbad
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Web development</h4>
+                  <h4 className="font-semibold text-lg">DSA</h4>
                   <p className="text-muted-foreground">
-                    Responsive Websites and Web Applications with modern
-                    framework
+                    Strong problem-solving and algorithmic thinking skills with
+                    500+ problems solved on{" "}
+                    <a
+                      className="text-primary font-bold cursor-pointer items-center hover:underline inline-block gap-1"
+                      href="https://leetcode.com/u/nikhillalpawa/"
+                      target="_blank"
+                    >
+                      Leetcode
+                      <Link size={15} className="inline-block ml-0.5" />
+                    </a>{" "}
+                    (Top 13.38% globally).
                   </p>
                 </div>
               </div>
@@ -55,27 +80,13 @@ export const AboutSection = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
+                  <Workflow className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">Work Ethics</h4>
                   <p className="text-muted-foreground">
-                    Responsive Websites and Web Applications with modern
-                    framework
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
-                  <p className="text-muted-foreground">
-                    Taking Projects from conception to completion while learning
-                    and leading the team
+                    Committed to a user-first approach, continuously improving
+                    and refining deliverables to ensure quality and usability.
                   </p>
                 </div>
               </div>

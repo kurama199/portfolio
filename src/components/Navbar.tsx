@@ -1,5 +1,5 @@
 import { cn, navData } from "@/utils/utils";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { useLayoutEffect, useMemo, useState } from "react";
 import ThemeToggle, { type ThemeToggleProps } from "./ThemeToggle";
 
@@ -76,6 +76,17 @@ export const Navbar = ({
             ))}
           </div>
         </div>
+        <div className="flex">
+          <a
+            href="Nikhil_CV.pdf"
+            download="Nikhil_CV.pdf"
+            title="Download CV"
+            className="p-2 rounded-full bg-primary/50 mr-2 hover:bg-primary/80 border-border border"
+          >
+            <Download size={24} />
+          </a>
+        </div>
+
         <ThemeToggle
           isDarkMode={isDarkMode}
           setIsDarkMode={setIsDarkMode}

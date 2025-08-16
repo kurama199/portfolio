@@ -19,9 +19,10 @@ export const HeroSection = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl max-auto opacity-0 animate-fade-in-delay-3">
-            Front-End Engineer with 4+ years of experience optimizing React
+            Front-End Engineer with 4+ years of experience in optimizing React
             apps, leading GraphQL migrations, and delivering high-impact
-            features that improve performance, scalability, and user engagement.
+            features that improving performance, scalability, and user
+            engagement.
           </p>
           <div className="opacity-0 animate-fade-in-delay-4">
             <a href={`#${navData.Project}`} className="cosmic-button">
@@ -29,10 +30,13 @@ export const HeroSection = () => {
             </a>
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-1/2 flex flex-col items-center animate-bounce">
+        <a
+          className="absolute bottom-15 left-1/2 transform -translate-1/2 flex flex-col items-center animate-bounce"
+          href={`#${navData.About}`}
+        >
           <span className="text-sm text-muted-foreground mb-2">Scroll</span>
           <ArrowDown className="h-5 w-5 text-primary" />
-        </div>
+        </a>
       </div>
     </section>
   );
