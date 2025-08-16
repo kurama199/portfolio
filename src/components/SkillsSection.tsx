@@ -3,8 +3,8 @@ import { useState } from "react";
 
 const skills = [
   // Programmng Languages
-  { name: "Typescript", level: 90, category: "Programming Languages" },
-  { name: "Javascript", level: 90, category: "Programming Languages" },
+  { name: "TypeScript", level: 90, category: "Programming Languages" },
+  { name: "JavaScript", level: 90, category: "Programming Languages" },
   { name: "Java", level: 60, category: "Programming Languages" },
   { name: "Python", level: 40, category: "Programming Languages" },
   { name: "CSS", level: 80, category: "Programming Languages" },

@@ -17,7 +17,7 @@ export const AboutSection = () => {
             <p className="text-muted-foreground">
               With over 4+ years of experience in Web Development. I specialize
               in creating performant web applications using technologies like
-              React, Redux, Tailwind, SCSS, TypeScript, Javascript etc.
+              React, Redux, Tailwind, SCSS, TypeScript, JavaScript etc.
             </p>
             <p className="text-muted-foreground">
               Passionate about continuous learning, I strive to improve and

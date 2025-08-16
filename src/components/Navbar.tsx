@@ -81,7 +81,7 @@ export const Navbar = ({
             href="Nikhil_CV.pdf"
             download="Nikhil_CV.pdf"
             title="Download CV"
-            className="p-2 rounded-full bg-primary/50 mr-2 hover:bg-primary/80 border-border border"
+            className="p-2 rounded-full bg-primary/50 mr-2 hover:bg-primary/80 border-border border transition-colors duration-75"
           >
             <Download size={24} />
           </a>

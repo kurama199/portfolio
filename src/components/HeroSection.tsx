@@ -21,8 +21,7 @@ export const HeroSection = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl max-auto opacity-0 animate-fade-in-delay-3">
             Front-End Engineer with 4+ years of experience in optimizing React
             apps, leading GraphQL migrations, and delivering high-impact
-            features that improving performance, scalability, and user
-            engagement.
+            features improving performance, scalability, and user engagement.
           </p>
           <div className="opacity-0 animate-fade-in-delay-4">
             <a href={`#${navData.Project}`} className="cosmic-button">
