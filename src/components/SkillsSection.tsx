@@ -10,10 +10,12 @@ const skills = [
   { name: "CSS", level: 80, category: "Programming Languages" },
   // frameworks
   { name: "React", level: 95, category: "Frameworks" },
+  { name: "Next.js", level: 70, category: "Frameworks" },
   { name: "Redux", level: 90, category: "Frameworks" },
   { name: "Tailwind", level: 75, category: "Frameworks" },
   { name: "SCSS", level: 80, category: "Frameworks" },
   { name: "Apollo Client", level: 75, category: "Frameworks" },
+  { name: "Next-auth", level: 80, category: "Frameworks" },
   //tools
   { name: "VS Code", level: 95, category: "tools" },
   { name: "Git/GitHub", level: 95, category: "tools" },
@@ -21,6 +23,7 @@ const skills = [
   { name: "GitLab", level: 95, category: "tools" },
   { name: "Figma", level: 85, category: "tools" },
   { name: "Jira", level: 95, category: "tools" },
+  { name: "PostgreSQL", level: 60, category: "tools" },
   // IT constructs
   { name: "DSA", level: 75, category: "IT Constructs" },
   { name: "OOPS", level: 90, category: "IT Constructs" },
